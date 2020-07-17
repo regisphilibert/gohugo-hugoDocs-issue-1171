@@ -1,0 +1,24 @@
+{
+  "name": "gohugo-hugodocs-issue-1171",
+  "version": "1.0.0",
+  "description": "Sample repo for https://github.com/gohugoio/hugo/issues/{issue_nbr}",
+  "main": "index.js",
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/regisphilibert/gohugo-hugoDocs-issue-1171.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/regisphilibert/gohugo-hugoDocs-issue-1171/issues"
+  },
+  "homepage": "https://github.com/regisphilibert/gohugo-hugoDocs-issue-1171#readme"
+}
