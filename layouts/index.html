@@ -3,7 +3,7 @@
   {{ with resources.Get "index.jsx" }}
     {{ $options := dict "externals" (slice "react-dom" "react") }}
     {{ $script := . | js.Build $options }}
-    <script type="text/javascript" src="{{ .RelPermalink }}"></script>
+    <script type="text/javascript" src="{{ $script.RelPermalink }}"></script>
   {{ end }}
 {{ end }}
 {{ define "main" }}
