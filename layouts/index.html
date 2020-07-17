@@ -1,18 +1,18 @@
 {{ define "head" }}
-  <script type="application/javascript" src="https://unpkg.com/react@16.0.0/umd/react.production.min.js"></script>
-  {{ with resources.Get "index.jsx" }}
-    {{ $options := dict "externals" (slice "react-dom" "react") }}
-    {{ $script := . | js.Build $options }}
-    <script type="text/javascript" src="{{ .RelPermalink }}"></script>
-  {{ end }}
+<script type="application/javascript" src="https://unpkg.com/react@16.0.0/umd/react.production.min.js"></script>
+{{ with resources.Get "index.jsx" }}
+{{ $options := dict "externals" (slice "react-dom" "react") }}
+{{ $script := . | js.Build $options }}
+<script type="text/javascript" src="{{ $script.RelPermalink }}"></script>
+{{ end }}
 {{ end }}
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
+<h1>{{ .Title }}</h1>
 
-  {{ .Content }}
+{{ .Content }}
 <div id="react"></div>
-  {{ range .Pages.ByTitle }}
-    <a href="{{ .RelPermalink }}">{{ .RelPermalink }}</a>
-    <br>
-  {{ end }}
+{{ range .Pages.ByTitle }}
+<a href="{{ .RelPermalink }}">{{ .RelPermalink }}</a>
+<br>
+{{ end }}
 {{ end }}
